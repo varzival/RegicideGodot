@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Regicide", "Regicide.csproj", "{DA6AFB9A-8789-4DDA-BF46-F9C85DA5BE51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA6AFB9A-8789-4DDA-BF46-F9C85DA5BE51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA6AFB9A-8789-4DDA-BF46-F9C85DA5BE51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA6AFB9A-8789-4DDA-BF46-F9C85DA5BE51}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{DA6AFB9A-8789-4DDA-BF46-F9C85DA5BE51}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{DA6AFB9A-8789-4DDA-BF46-F9C85DA5BE51}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{DA6AFB9A-8789-4DDA-BF46-F9C85DA5BE51}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

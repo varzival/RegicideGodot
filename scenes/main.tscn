@@ -1,0 +1,172 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://godot_nodes/GCard.cs" type="Script" id=1]
+[ext_resource path="res://godot_nodes/GPile.cs" type="Script" id=2]
+[ext_resource path="res://textures/BackFace/CardBackFaceWhiteBlueSmallPattern.png" type="Texture" id=3]
+[ext_resource path="res://godot_nodes/GHand.cs" type="Script" id=4]
+[ext_resource path="res://godot_nodes/StatViewer.cs" type="Script" id=5]
+[ext_resource path="res://fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://godot_nodes/GGame.cs" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+outline_color = Color( 1, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[node name="Root" type="Node2D"]
+position = Vector2( -48.7575, -1.18918 )
+script = ExtResource( 7 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Screen" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG" type="ColorRect" parent="CanvasLayer/Screen"]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.784314, 0.898039, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hand" type="Control" parent="CanvasLayer/Screen"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -277.042
+margin_top = -239.278
+margin_right = -237.042
+margin_bottom = -199.278
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DiscardPile" type="TextureRect" parent="CanvasLayer/Screen"]
+anchor_left = 0.452385
+anchor_top = -0.00198196
+anchor_right = 0.452385
+anchor_bottom = -0.00198181
+margin_left = -0.143555
+margin_top = 60.6702
+margin_right = 903.859
+margin_bottom = 1341.67
+rect_scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 3 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+IsFaceUp = true
+
+[node name="Enemy" type="TextureRect" parent="CanvasLayer/Screen"]
+anchor_left = 0.452385
+anchor_top = -0.00198196
+anchor_right = 0.452385
+anchor_bottom = -0.00198201
+margin_left = -409.188
+margin_top = 58.2712
+margin_right = 494.812
+margin_bottom = 1339.27
+rect_scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 3 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Health" type="Label" parent="CanvasLayer/Screen/Enemy"]
+margin_left = 472.0
+margin_top = -263.0
+margin_right = 811.0
+margin_bottom = -41.0
+rect_pivot_offset = Vector2( 169.5, 111 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0.0392157, 1, 1 )
+text = "TTT"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Attack" type="Label" parent="CanvasLayer/Screen/Enemy"]
+margin_left = 56.707
+margin_top = -263.0
+margin_right = 395.707
+margin_bottom = -41.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "TTT"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DrawPile" type="TextureRect" parent="CanvasLayer/Screen"]
+anchor_left = 0.452385
+anchor_top = -0.00198196
+anchor_right = 0.452385
+anchor_bottom = -0.00198201
+margin_left = -151.518
+margin_top = 59.8703
+margin_right = 752.482
+margin_bottom = 1340.87
+rect_scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 3 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Joker1" type="TextureRect" parent="CanvasLayer/Screen"]
+anchor_left = 0.452385
+anchor_top = -0.00198196
+anchor_right = 0.452385
+anchor_bottom = -0.00198201
+margin_left = 206.061
+margin_top = 63.0831
+margin_right = 1110.06
+margin_bottom = 1344.08
+rect_scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 3 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Joker2" type="TextureRect" parent="CanvasLayer/Screen"]
+anchor_left = 0.452385
+anchor_top = -0.00198196
+anchor_right = 0.452385
+anchor_bottom = -0.00198201
+margin_left = 351.149
+margin_top = 64.2212
+margin_right = 1255.15
+margin_bottom = 1345.22
+rect_scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 3 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NERFED" type="Label" parent="CanvasLayer/Screen"]
+margin_left = -75.0826
+margin_top = 155.917
+margin_right = 611.917
+margin_bottom = 336.917
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 169.5, 111 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0.0392157, 1, 1 )
+text = "NERFED"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
