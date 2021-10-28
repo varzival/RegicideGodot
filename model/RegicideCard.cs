@@ -178,15 +178,38 @@ public class RegicideCard : Card
         }
     }
 
+    class DrawFull : Effect
+    {
+        public Hand Hand;
+
+        public DrawFull(Hand hand)
+        {
+            Hand = hand;
+        }
+
+        public override void Execute()
+        {
+            Hand.DiscardAll();
+            Hand.Draw(Hand.MaxSize);
+        }
+    }
+
     public static RegicideCard CreateCard(Suit suit, int power, Enemy enemy, Pile drawPile, Pile discardPile, Hand hand)
     {
-        Debug.Assert(0 < power, "Power must be positive");
+        Debug.Assert(0 <= power, "Power must be positive");
 
         Effect fullEffect;
 
+        /*
         if (power == 0)
         {
             fullEffect = new NerfEnemy(enemy);
+        }
+        */
+
+        if (power == 0)
+        {
+            fullEffect = new DrawFull(hand);
         }
         else {
             switch(suit)

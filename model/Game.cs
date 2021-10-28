@@ -28,7 +28,6 @@ public class Game
         EnemyPile.SetCardsByParts(enemy_cards);
 
         ReplaceEnemy();
-        Enemy.Defeat += ReplaceEnemy;
     }
 
     public void ReplaceEnemy()

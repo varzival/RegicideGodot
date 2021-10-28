@@ -27,8 +27,10 @@ __meta__ = {
 }
 
 [node name="BG" type="ColorRect" parent="CanvasLayer/Screen"]
-margin_right = 1024.0
-margin_bottom = 600.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color( 0.784314, 0.898039, 1, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -67,7 +69,7 @@ IsFaceUp = true
 
 [node name="Enemy" type="TextureRect" parent="CanvasLayer/Screen"]
 anchor_left = 0.452385
-anchor_top = -0.00198196
+anchor_top = -0.00198201
 anchor_right = 0.452385
 anchor_bottom = -0.00198201
 margin_left = -409.188
@@ -110,7 +112,7 @@ __meta__ = {
 
 [node name="DrawPile" type="TextureRect" parent="CanvasLayer/Screen"]
 anchor_left = 0.452385
-anchor_top = -0.00198196
+anchor_top = -0.00198201
 anchor_right = 0.452385
 anchor_bottom = -0.00198201
 margin_left = -151.518
@@ -126,7 +128,7 @@ __meta__ = {
 
 [node name="Joker1" type="TextureRect" parent="CanvasLayer/Screen"]
 anchor_left = 0.452385
-anchor_top = -0.00198196
+anchor_top = -0.00198201
 anchor_right = 0.452385
 anchor_bottom = -0.00198201
 margin_left = 206.061
@@ -142,7 +144,7 @@ __meta__ = {
 
 [node name="Joker2" type="TextureRect" parent="CanvasLayer/Screen"]
 anchor_left = 0.452385
-anchor_top = -0.00198196
+anchor_top = -0.00198201
 anchor_right = 0.452385
 anchor_bottom = -0.00198201
 margin_left = 351.149
@@ -156,16 +158,68 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="GameStatus" type="Label" parent="CanvasLayer/Screen"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -333.034
+margin_top = -78.5723
+margin_right = 1468.97
+margin_bottom = 102.428
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 169.5, 111 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0.0392157, 1, 1 )
+text = "Play"
+align = 1
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="NERFED" type="Label" parent="CanvasLayer/Screen"]
-margin_left = -75.0826
-margin_top = 155.917
-margin_right = 611.917
-margin_bottom = 336.917
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -584.829
+margin_top = 161.634
+margin_right = 102.171
+margin_bottom = 342.634
 rect_scale = Vector2( 0.15, 0.15 )
 rect_pivot_offset = Vector2( 169.5, 111 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0.0392157, 1, 1 )
 text = "NERFED"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OverlayDefeat" type="ColorRect" parent="CanvasLayer/Screen"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color( 0.00392157, 0.0117647, 0.0196078, 0.827451 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Defeat" type="Label" parent="CanvasLayer/Screen/OverlayDefeat"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -488.634
+margin_top = -169.022
+margin_right = 1089.37
+margin_bottom = 258.978
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 169.5, 111 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Defeat"
+align = 1
+valign = 1
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
